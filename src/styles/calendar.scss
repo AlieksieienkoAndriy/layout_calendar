@@ -1,0 +1,26 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 715px;
+  margin: auto;
+  padding-top: 10%;
+
+  div {
+    height: 100px;
+    width: 100px;
+    margin: 1px;
+    border: 1px black solid;
+    background-color: #eee;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px;
+    box-sizing: border-box;
+
+    &:hover {
+      background-color: pink;
+      cursor: pointer;
+      transform: translate(0, -20px);
+      transition: all 500ms;
+    }
+  }
+}

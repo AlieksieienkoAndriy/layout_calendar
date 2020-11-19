@@ -1,3 +1,25 @@
-body {
-  margin: 0;
+@import "reset";
+@import "calendar";
+@import "variables";
+
+@each $number in $numbers {
+  .calendar-#{$number} {
+    div:not(:nth-child(-n + #{$number})) {
+      display: none;
+    }
+  }
+}
+
+@each $day, $i in $days {
+  .calendar-#{$day} {
+    div:first-child {
+      margin-left: calc(1px + (#{$i} * #{$block} + (#{$i} * #{$margin})));
+    }
+  }
+}
+
+@for $i from 1 through 31 {
+  .calendar div:nth-child(#{$i})::before {
+    content: "#{$i}";
+  }
 }
