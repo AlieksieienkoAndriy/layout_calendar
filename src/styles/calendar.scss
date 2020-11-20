@@ -1,19 +1,21 @@
+@import "variables";
+
 .calendar {
   display: flex;
   flex-wrap: wrap;
-  width: 715px;
+  width: calc((#{$e-size} + #{$margin}) * 7);
   margin: auto;
   padding-top: 10%;
 
   div {
-    height: 100px;
-    width: 100px;
-    margin: 1px;
+    height: $e-size;
+    width: $e-size;
+    margin: 0 $margin $margin 0;
     border: 1px black solid;
     background-color: #eee;
     font-size: 30px;
     text-align: center;
-    line-height: 100px;
+    line-height: $e-size;
     box-sizing: border-box;
 
     &:hover {

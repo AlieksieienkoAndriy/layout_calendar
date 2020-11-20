@@ -13,7 +13,7 @@
 @each $day, $i in $days {
   .calendar-#{$day} {
     div:first-child {
-      margin-left: calc(1px + (#{$i} * #{$block} + (#{$i} * #{$margin})));
+      margin-left: calc((#{$i} * #{$e-size} + (#{$i} * #{$margin})));
     }
   }
 }
