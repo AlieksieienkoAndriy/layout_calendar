@@ -17,12 +17,12 @@
     text-align: center;
     line-height: $e-size;
     box-sizing: border-box;
+    transition-duration: 500ms;
 
     &:hover {
       background-color: pink;
       cursor: pointer;
       transform: translate(0, -20px);
-      transition: all 500ms;
     }
   }
 }
